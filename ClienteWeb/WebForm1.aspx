@@ -34,6 +34,7 @@
             <asp:Button Text="Agregar" runat="server" Id="btnAgregar" OnClick="btnAgregar_Click1"/>
             <asp:Button Text="Eliminar" runat="server" Id="btnEliminar" OnClick="btnEliminar_Click"/>
             <asp:Button Text="Actualizar" runat="server" Id="btnActualizar" OnClick="btnActualizar_Click" />
+            <asp:Button Text="Limpiar" runat="server" Id="btnLimpiar" OnClick="btnLimpiar_Click" />
         </p>
         <p>
             Buscar:<asp:TextBox runat="server" ID="Buscar" />
@@ -44,7 +45,11 @@
             <asp:Button Text="Buscar" runat="server" ID="btnBuscar" OnClick="btnBuscar_Click" />
         </p>
         <p>
-            <h1>Tabla Escuela</h1>
+            <div>
+                <h1>Alumnos</h1>
+                <asp:Button Text="Listar" runat="server" Id="btnListar" OnClick="btnListar_Click" />
+            </div>
+            <br />
             <asp:GridView runat="server" ID="gvEscuela"></asp:GridView>
         </p>
     </form>

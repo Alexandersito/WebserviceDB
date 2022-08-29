@@ -56,10 +56,30 @@ namespace ClienteWeb
         {
             string texto = Buscar.Text.Trim();
             string criterio = Busqueda.SelectedItem.Text;
-
             gvEscuela.DataSource = servicio.BuscarAlumno(texto, criterio);
             gvEscuela.DataBind();
+            txtCodAlumno.Text = gvEscuela.Rows[0].Cells[0].Text.ToString();
+            txtApellidos.Text = (gvEscuela.Rows[0].Cells[1].Text).ToString();
+            txtNombres.Text = gvEscuela.Rows[0].Cells[2].Text.ToString();
+            txtLugarNac.Text = gvEscuela.Rows[0].Cells[3].Text.ToString();
+            txtFechaNac.Text = gvEscuela.Rows[0].Cells[4].Text.ToString();
+            txtCodEscuela.Text = gvEscuela.Rows[0].Cells[5].Text.ToString();
+
         }
 
+        protected void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtCodAlumno.Text = "";
+            txtApellidos.Text = "";
+            txtNombres.Text = "";
+            txtLugarNac.Text = "";
+            txtFechaNac.Text = "";
+            txtCodEscuela.Text = "";
+        }
+
+        protected void btnListar_Click(object sender, EventArgs e)
+        {
+            Listar();
+        }
     }
 }
